@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Portfolio-V3/',
+  base: process.env.NODE_ENV === 'production' ? '/Portfolio-V3/' : '/',
   server: {
     port: 3001,
   },
